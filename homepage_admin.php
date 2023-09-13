@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>eSPES | Home </title>
+    <title>eSPES | Admin Home </title>
     <!-- Bootstrap -->
     <link href="bootstrap.css" rel="stylesheet">
     <!-- NProgress -->
@@ -41,28 +41,30 @@
 		<img src="spes_logo.png" alt="photo" class="img-circle profile_img">
 	  </div>
 	  <div class="profile_info">
-		<span>Welcome, <br>Applicant</br></span>
+		<span>Welcome, <br>ADMIN</br></span>
 		<h2> </h2>
 	  </div>
 	</div> 
             <!-- /menu profile quick info -->
             <br />
             <!-- sidebar menu -->
-				 <div id="sidebar-menu" class="c">
+				 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
   <div class="menu_section">
 	<h3>SPES Beneficiary</h3>
 	<ul class="nav side-menu">
-	  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-		<ul class="nav child_menu">
-    <li><a href="http://localhost/Capstone/homepage.php">Dashboard</a></li>		
-		  <li><a href="http://localhost/Capstone/spes_profile.php">My Profile <span class="badge bg-red pull-right">0%</span></a></li>
-		  <li><a href="http://localhost/Capstone/pre_emp_doc.php">Required Docs. <span class="badge bg-red pull-right">0%</span></a></li>
-		  <li><a href="http://localhost/Capstone/submit_application.php">Submit Application </a></li>
+	  <li><a><i class="fa fa-home"></i> Applicants <span class="fa fa-chevron-down"></span></a>
+		<ul class="nav child_menu">		
+		  <li><a href="#">Applicants' List </a></li>
+		  <li><a href="#">Apprvoed Applicants </a></li>
 		</ul>
 	  </li>
 	  	  <li><a href=" "> <i class="fa fa-cog"></i>Settings</a></li>
-	  <li><a href="https://drive.google.com/file/d/1LFdSlo_jwLYn1AtKT9RF2EFrhSMnR7Hu/view?usp=share_link" target="_blank"><i class="fa fa-book"></i>User Manual</a></li>
-	  	</ul> </div> </div> </div> </div>
+	  	</ul>
+  </div>
+</div> 
+
+          </div>
+        </div>
 
         <!-- /top navigation -->
         <div id="mainTopNav" class="top_nav">
@@ -77,18 +79,15 @@
                      </div>
         <!-- /top navigation -->
 
+
         <div id="loader"></div>
 
         <!-- page content -->
         <div id="mainContent" class="right_col" role="main">
-			
-<h2> --- </h2>
-<div class="alert alert-danger alert-dismissible fade in" role="alert" style="margin-top: 10px";>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-    <b><b>The My Profile and Required Docs. section should be both 100%.</b></b>
-</div>
+			  <h2> SPES Admin </h2>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br />
+<br />
         </div>
         <!-- /page content -->
 
@@ -115,7 +114,6 @@
             document.getElementById("mainContent").style.display = "block";
         }
     </script> 
-
     <script>
 $(document).ready(function() {
   // Add a click event handler to the parent menu items with a dropdown
@@ -127,8 +125,6 @@ $(document).ready(function() {
   });
 });
 </script>
-
-
 
 	
   </body>

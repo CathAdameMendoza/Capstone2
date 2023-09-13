@@ -89,40 +89,19 @@
           </div>
         </div>
 
-        <!-- top navigation -->
+        <!-- /top navigation -->
         <div id="mainTopNav" class="top_nav">
              
-<div class="nav_menu">
-	<nav>
-	  <div class="nav toggle">
-		<a id="menu_toggle"><i class="fa fa-bars"></i></a>
-	  </div>
-
-	  <ul class="nav navbar-nav navbar-right">
-		<li class="">
-		  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-			<img src="spes_logo.png" alt="">			<span class=" fa fa-angle-down"></span>
-		  </a>
-		  <ul class="dropdown-menu dropdown-usermenu pull-right">
-			<li>
-				<a href="http://localhost/Capstone/spes_profile.php"> 
-					<span class="badge bg-red pull-right">20%</span>
-					<span>Profile</span>
-				</a>
-			</li>
-			<li>
-			  <a href=""><span>Settings</span></a>
-			</li>
-			<li><a href="javascript:;"><i class="glyphicon glyphicon-question-sign"></i> Help</a></li>
-			<li><a href="http://localhost/Capstone/landing.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-		  </ul>
-		</li>
-
-	  </ul>
-	</nav>
-  </div> 
-        </div>
+             <div class="nav_menu">
+               <nav>
+                 <ul class="nav navbar-nav navbar-right">
+                 <li><a href="http://localhost/Capstone/landing.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                 </ul>
+               </nav>
+               </div> 
+                     </div>
         <!-- /top navigation -->
+
 
         <div id="loader"></div>
 
@@ -284,21 +263,6 @@
 			  </div>
 			 
 			  <div class="form-group">
-				<label class="col-md-3 col-sm-3 col-xs-12 control-label">Other Info:</label>
-				<div class="col-md-6 col-sm-6 col-xs-12">
-				  <div class="checkbox">
-					<label><input type="checkbox" name="parents_pwd" class="flat" value="1" /> Person With Disability</label>
-				  </div>
-				  <div class="checkbox">
-				  	<label><input type="checkbox" name="parents_rebel_returnees" class="flat" value="3" /> Rebel Returnees</label>
-				  </div>
-				  <div class="checkbox">
-				  	<label><input type="checkbox" name="parents_victims_armed_conflict" class="flat" value="6" /> Victims of Armed Conflict</label>
-				  </div>				  
-			    </div>
-			  </div>
-
-			  <div class="form-group">
 				<label class="control-label col-md-3 col-sm-3 col-xs-12">Parent Status: *</label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
 				  <div id="gender" class="btn-group" data-toggle="buttons">
@@ -314,21 +278,6 @@
 				  </div>
 				</div>
 			  </div>
-			  <div class="form-group">
-				<label class="col-md-3 col-sm-3 col-xs-12 control-label">Parent's Info:</label>
-				<div class="col-md-6 col-sm-6 col-xs-12">
-				  <div class="checkbox">
-				  	<label><input type="checkbox" name="parents_senior_citizen" class="flat" value="2" /> Senior Citizen</label>
-				  </div>
-				  <div class="checkbox">
-				  	<label><input type="checkbox" name="parents_sugar_worker" class="flat" value="3" /> Sugar Plantation Worker</label>
-				  </div>
-				  <div class="checkbox">
-				  	<label><input type="checkbox" name="parents_ip" class="flat" value="3" /> Indigenous Person</label>
-				  </div>					  
-			    </div>
-			  </div>	
-			  
 			  
 			  <div class="form-group">
 				<label class="control-label col-md-3 col-sm-3 col-xs-12">Parent is displaced worker/s?: *</label>
