@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>eSPES | Admin Home </title>
+    <title> eSPES | Approved List </title>
     <!-- Bootstrap -->
     <link href="bootstrap.css" rel="stylesheet">
     <!-- NProgress -->
@@ -19,18 +19,20 @@
     <link href="jqvmap.min.css" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
     <link href="daterangepicker.css" rel="stylesheet">
-    <!-- Emmet -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/emmet/2.3.4/emmet.cjs.js" integrity="sha512-/0TtlmFaP6kPAvDm5nsVp86JQQ1QlfFXaLV9svYbZNtGUSSvi7c3FFSRrs63B9j6iM+gBffFA3AcL4V3mUxycw==" crossorigin="anonymous"></script>
+    <!-- Croppie -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.5.1/croppie.css" integrity="sha512-2eMmukTZtvwlfQoG8ztapwAH5fXaQBzaMqdljLopRSA0i6YKM8kBAOrSSykxu9NN9HrtD45lIqfONLII2AFL/Q==" crossorigin="anonymous" />
     <!-- Custom Theme Style -->
     <link href="custom.css" rel="stylesheet">
 	  <!-- <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="29efea84-679c-4042-bdb8-a3ccc09e5088";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script> -->
     <!-- jQuery UI -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  </head>
 
-  <body class="nav-md" >
+    
+
+
+	<body class="nav-md" >
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -41,30 +43,31 @@
 		<img src="spes_logo.png" alt="photo" class="img-circle profile_img">
 	  </div>
 	  <div class="profile_info">
-		<span>Welcome, <br>ADMIN</br></span>
+		<span>Welcome, <br>SPES Admin</br></span>
 		<h2> </h2>
 	  </div>
 	</div> 
-            <!-- /menu profile quick info -->
-            <br />
+             <!-- /menu profile quick info -->
+             <br />
             <!-- sidebar menu -->
-				 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-  <div class="menu_section">
-	<h3>SPES Beneficiary</h3>
-	<ul class="nav side-menu">
-	  <li><a><i class="fa fa-home"></i> Applicants <span class="fa fa-chevron-down"></span></a>
-		<ul class="nav child_menu">		
-		  <li><a href="#">Applicants' List </a></li>
-		  <li><a href="#">Apprvoed Applicants </a></li>
-		</ul>
-	  </li>
-	  	  <li><a href=" "> <i class="fa fa-cog"></i>Settings</a></li>
-	  	</ul>
-  </div>
-</div> 
+				 <div id="sidebar-menu" class="c">
+  				 <div class="menu_section">
+           <a id="menu_toggle"><i class="fa fa-bars"></i></a>
 
+  <h3>SPES Admin Menu</h3>
+	<ul class="nav side-menu">
+
+	  <li><a id="menu_toggle" href="http://localhost/Capstone/admin_homepage.php" ><i class="fa fa-bars"></i> Applicants</a>
+    <li><a id="menu_toggle" href="http://localhost/Capstone/admin_applicants.php"><i class="fa fa-bars"></i> Applicants' List </a>	
+    <li><a id="menu_toggle" href="http://localhost/Capstone/admin_list.php"><i class="fa fa-bars"></i> Approved Applicants</a>	
+		            </ul>
+	            </li>
+	          </ul>
           </div>
         </div>
+        
+    </div>
+  </div>
 
         <!-- /top navigation -->
         <div id="mainTopNav" class="top_nav">
@@ -79,53 +82,72 @@
                      </div>
         <!-- /top navigation -->
 
-
         <div id="loader"></div>
 
-        <!-- page content -->
-        <div id="mainContent" class="right_col" role="main">
+ <!-- page content -->
+ 
+ <div id="mainContent" class="right_col" role="main">
 			  <h2> SPES Admin </h2>
+<br />
+<br />
 
-<br />
-<br />
-        </div>
-        <!-- /page content -->
+<!-- Header Row -->
+<div class="box-container header">
+    <div class="column">Applicant Number</div>
+    <div class="column">Name</div>
+    <div class="column">Email</div>
+    <div class="column">Status</div>
+    <div class="column">Actions</div>
+</div>
+
+<!-- Row 1 -->
+<div class="box-container row">
+    <div class="column">1</div>
+    <div class="column">John Doe</div>
+    <div class="column">john@example.com</div>
+    <div class="column">Approved</div>
+    <div class="column">
+        <button class="action-button">View</button>
+    </div>
+</div>
+
+<!-- Row 2 -->
+<div class="box-container row">
+    <div class="column">2</div>
+    <div class="column">Jane Smith</div>
+    <div class="column">jane@example.com</div>
+    <div class="column">Approved</div>
+    <div class="column">
+        <button class="action-button">View</button>
+    </div>
+</div>
+
 
         <!-- footer content -->
         <footer id="mainFooter">
           <div class="pull-right">
-             &copy; Copyright 2023 | Online Special Program for Employment of Student (SPES)
-          </div>
+             &copy; Copyright 2023 | Online Special Program for Employment of Student (SPES) 
           <div class="clearfix"></div>
         </footer>
         <!-- /footer content -->
       </div>
     </div>
-   
-    <script>
-      var myVar;
 
-        function myFunction() {
-            myVar = setTimeout(showPage, 3000);
-        }
-
-        function showPage() {
-            document.getElementById("loader").style.display = "none";
-            document.getElementById("mainContent").style.display = "block";
-        }
-    </script> 
+    <!-- Custom Theme Scripts -->
+    <script src="custom.js"></script>
+    
     <script>
-$(document).ready(function() {
-  // Add a click event handler to the parent menu items with a dropdown
-  $("#sidebar-menu .nav.side-menu > li > a").click(function(e) {
-    e.preventDefault(); // Prevent the default link behavior
-    $(this).parent().toggleClass("active"); // Toggle the "active" class on the parent li
-    $(this).find(".fa-chevron-down").toggleClass("fa-chevron-up"); // Toggle the chevron icon
-    $(this).next("ul.nav.child_menu").slideToggle(); // Toggle the child menu
+  $(document).ready(function () {
+    // Toggle sidebar
+    $('#menu_toggle').click(function () {
+      if ($('body').hasClass('nav-md')) {
+        $('body').removeClass('nav-md').addClass('nav-sm');
+      } else {
+        $('body').removeClass('nav-sm').addClass('nav-md');
+      }
+    });
   });
-});
 </script>
-
 	
   </body>
 </html>

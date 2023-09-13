@@ -76,17 +76,10 @@ Register </a>
 </div>
 						
 <div class="row">
-<div class="col-6">
-<a class="btn btn-primary btn-lg btn-block" style="background-color: #3A8891" href="https://drive.google.com/file/d/1LFdSlo_jwLYn1AtKT9RF2EFrhSMnR7Hu/view?usp=share_link" target="_blank" role="button">
+<div class="col-6 mx-auto">
+<a class="btn btn-primary btn-lg btn-block" style="background-color: #3A8891" href="#" target="_blank" role="button">
 <i class="far fa-user me-2"></i> 
 FOR SPES APPLICANTS
-</a>
-</div>
-
-<div class="col-6">
-<a class="btn btn-primary btn-lg btn-block" style="background-color: #0E5E6F" href="https://drive.google.com/file/d/15JiKn7TxnQGZ3ygTaJ68Z6FzLLN3I5Nh/view?usp=sharing" target="_blank" role="button">
-<i class="far fa-user me-2"></i>
-FOR EMPLOYERS
 </a>
 </div>
 </div>

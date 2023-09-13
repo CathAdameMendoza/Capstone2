@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>eSPES | Home </title>
+    <title>eSPES | Admin Home Page </title>
     <!-- Bootstrap -->
     <link href="bootstrap.css" rel="stylesheet">
     <!-- NProgress -->
@@ -41,7 +41,7 @@
 		<img src="spes_logo.png" alt="photo" class="img-circle profile_img">
 	  </div>
 	  <div class="profile_info">
-		<span>Welcome, <br>Applicant</br></span>
+		<span>Welcome, <br>ADMIN</br></span>
 		<h2> </h2>
 	  </div>
 	</div> 
@@ -49,21 +49,21 @@
             <br />
             <!-- sidebar menu -->
 				 <div id="sidebar-menu" class="c">
-  <div class="menu_section">
-	<h3>SPES Beneficiary</h3>
+  				 <div class="menu_section">
+           <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+
+  <h3>SPES Admin Menu</h3>
 	<ul class="nav side-menu">
-	  <li><a><i class="fa fa-home"></i> Menu <span class="fa fa-chevron-down"></span></a>
-		<ul class="nav child_menu">
-    <li><a href="http://localhost/Capstone/homepage.php">Dashboard</a></li>		
-		  <li><a href="http://localhost/Capstone/spes_profile.php">My Profile <span class="badge bg-red pull-right">0%</span></a></li>
-		  <li><a href="http://localhost/Capstone/pre_emp_doc.php">Required Docs. <span class="badge bg-red pull-right">0%</span></a></li>
-      <li><a href="http://localhost/Capstone/submit_application.php">Submit Application</a></li>
+
+	  <li><a id="menu_toggle" href="http://localhost/Capstone/admin_homepage.php" ><i class="fa fa-bars"></i> Applicants</a>
+    <li><a id="menu_toggle" href="http://localhost/Capstone/admin_applicants.php"><i class="fa fa-bars"></i> Applicants' List </a>	
+    <li><a id="menu_toggle" href="http://localhost/Capstone/admin_list.php"><i class="fa fa-bars"></i> Approved Applicants</a>	
 		            </ul>
 	            </li>
 	          </ul>
           </div>
         </div>
-
+        
     </div>
   </div>
 
@@ -80,18 +80,49 @@
                      </div>
         <!-- /top navigation -->
 
+
         <div id="loader"></div>
 
         <!-- page content -->
         <div id="mainContent" class="right_col" role="main">
-			
-<h2> Good day, Applicant </h2>
-<div class="alert alert-danger alert-dismissible fade in" role="alert" style="margin-top: 10px";>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-    <b><b>The My Profile and Required Docs. section should be both 100%.</b></b>
-</div>
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			  <h2> SPES Admin </h2>
+<br />
+<br />
+<div class="box-container">
+<link href="custom.css" rel="stylesheet">
+        <!-- Box 1 -->
+        <div class="box">
+          <h2>Total No. SPES Babies</h2>
+          <p>1500</p>
+        </div>
+        <!-- Box 2 -->
+        <div class="box">
+          <h2>Total No. of New Applicants</h2>
+          <p>500</p>
+        </div>
+        <!-- Box 3 -->
+        <div class="box">
+          <h2>Total No. of Renewal </h2>
+          <p>100</p>
+        </div>
+        </div>
+        <div class="box-container">
+          <div class="box-a">
+          <div class="chart">
+           <canvas id="linechart" width="400" height="410"></canvas>
+          </div>
+          </div>
+          <div class="box-a">
+            <div class="chart">
+              <canvas id="barchart" width="400" height="410"></canvas>
+            </div>
+            </div>
+          <div class="box-a">
+            <div class="chart">
+              <canvas id="doughnut" width="100" height="100"></canvas>
+            </div>
+            </div>
+          </div>
         </div>
         <!-- /page content -->
 
@@ -106,7 +137,7 @@
       </div>
     </div>
    
-   <!-- <script>
+    <script>
       var myVar;
 
         function myFunction() {
@@ -117,22 +148,23 @@
             document.getElementById("loader").style.display = "none";
             document.getElementById("mainContent").style.display = "block";
         }
-    </script> -->
+    </script> 
 
+<!-- Custom Theme Scripts -->
+<script src="custom.js"></script>
+    
     <script>
-$(document).ready(function() {
-  // Add a click event handler to the parent menu items with a dropdown
-  $("#sidebar-menu .nav.side-menu > li > a").click(function(e) {
-    e.preventDefault(); // Prevent the default link behavior
-    $(this).parent().toggleClass("active"); // Toggle the "active" class on the parent li
-    $(this).find(".fa-chevron-down").toggleClass("fa-chevron-up"); // Toggle the chevron icon
-    $(this).next("ul.nav.child_menu").slideToggle(); // Toggle the child menu
+  $(document).ready(function () {
+    // Toggle sidebar
+    $('#menu_toggle').click(function () {
+      if ($('body').hasClass('nav-md')) {
+        $('body').removeClass('nav-md').addClass('nav-sm');
+      } else {
+        $('body').removeClass('nav-sm').addClass('nav-md');
+      }
+    });
   });
-});
 </script>
-
-
-
 	
   </body>
 </html>

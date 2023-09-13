@@ -9064,14 +9064,97 @@ ul.notifications {
 
 
 .table-text-color {
-
     color: black;
+}
 
+.box-container {
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: -1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* CSS for each individual box */
+  .box {
+    height: 140px;
+    padding: 20px;
+    width: 340px;
+    margin-left: 30px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #2A3F54 0%, #1b5757 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc635', endColorstr='#c0ea67', GradientType=1 );
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  }
+
+/* Box Container Header */
+.box-container.header {
+	display: flex;
+    max-width: 100%;
+    margin-left: -1px;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-weight: bold;
+    color:#000;
+}
+
+/* Box Container Rows */
+.box-container.row {
+    display: flex;
+    max-width: 100%;
+    margin-left: -1px;
+    justify-content: space-between;
+    background-color: #c4bcbc; /* Row background color */
+    padding: 10px;
+    color:#000;
+}
+
+/* Individual Columns */
+.column {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+}
+
+.column:first-child {
+    text-align: left;
+}
+
+.column:last-child {
+    text-align: right;
+}
+
+/* Actions Buttons */
+.action-button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.approve-button {
+    background-color: #26B99A; /* Approve button background color */
+}
+
+.decline-button {
+    background-color: #A03232; /* Decline button background color */
 }
 
 
 
-/* #loader {
+/*#loader {
 
     position: absolute;
 
@@ -9123,7 +9206,7 @@ ul.notifications {
 
   /* Add animation to "page content" */
 
-  /* .animate-bottom {
+ /*.animate-bottom {
 
     position: relative;
 
@@ -9163,8 +9246,4 @@ ul.notifications {
 
     text-align: center;
 
-  }
-
-
-
-  
+  }*/

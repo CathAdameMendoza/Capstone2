@@ -35,59 +35,37 @@
       <div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
-              <a href="/spes/" class="site_title"><span> Online SPES </span></a>
-            </div>
-            <div class="clearfix"></div>
             <!-- menu profile quick info -->
 					<div class="profile clearfix">
 	  <div class="profile_pic">
 		<img src="spes_logo.png" alt="photo" class="img-circle profile_img">
 	  </div>
 	  <div class="profile_info">
-		<span>Welcome,</span>
+		<span>Welcome, <br>Applicant</br></span>
 		<h2> </h2>
 	  </div>
 	</div> 
-            <!-- /menu profile quick info -->
-            <br />
+             <!-- /menu profile quick info -->
+			 <br />
             <!-- sidebar menu -->
-				 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+				 <div id="sidebar-menu" class="c">
   <div class="menu_section">
 	<h3>SPES Beneficiary</h3>
 	<ul class="nav side-menu">
-	  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+	  <li><a><i class="fa fa-home"></i> Menu <span class="fa fa-chevron-down"></span></a>
 		<ul class="nav child_menu">
-		  <li><a href="http://localhost/Capstone/homepage.php">Dashboard</a></li>		
+    <li><a href="http://localhost/Capstone/homepage.php">Dashboard</a></li>		
 		  <li><a href="http://localhost/Capstone/spes_profile.php">My Profile <span class="badge bg-red pull-right">0%</span></a></li>
 		  <li><a href="http://localhost/Capstone/pre_emp_doc.php">Required Docs. <span class="badge bg-red pull-right">0%</span></a></li>
-		  <li><a href="http://localhost/Capstone/submit_application.php">Submit Application </a></li>
-		</ul>
-	  </li>
-	  	  <li><a href="http://localhost/Capstone/homepage.php"> <i class="fa fa-cog"></i>Settings</a></li>
-	  <li><a href="https://drive.google.com/file/d/1LFdSlo_jwLYn1AtKT9RF2EFrhSMnR7Hu/view?usp=share_link" target="_blank"><i class="fa fa-book"></i>User Manual</a></li>
-	  	</ul>
-  </div>
-</div> 
-            <!-- /sidebar menu -->
-            <!-- /menu footer buttons -->
-            <!--div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="landing.php">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-              </a>
-            </div> -->
-            <!-- /menu footer buttons -->
+      <li><a href="http://localhost/Capstone/submit_application.php">Submit Application</a></li>
+		            </ul>
+	            </li>
+	          </ul>
           </div>
         </div>
+        
+    </div>
+  </div>
 
         <!-- /top navigation -->
         <div id="mainTopNav" class="top_nav">
@@ -458,7 +436,9 @@
 				<div class="col-md-2 col-sm-2 col-xs-12">
 				  <input class="form-control col-md-7 col-xs-12" type="text" id="suc_date_attendance" name="suc_date_attendance" placeholder="Year Started - Year Ended" data-toggle="tooltip" data-placement="left" title="Date Attendance format: Year - Year e.g.2014 - 2017" value="" />
 				</div>
-			  </div>			  			  		  
+			  </div>	
+			  
+			  
 			  	<script>
 					$('#suc_year_level').val();
 					$('#suc_course').val();
@@ -541,266 +521,6 @@
 	$('input:radio[name="civil_status"][value=""]').prop('checked', true);
 	$('input:radio[name="spes_type"][value=""]').prop('checked', true);
 	$('input:radio[name="parent_status"][value=""]').prop('checked', true);
-
-	$('input:checkbox[name="parents_pwd"][value=""]').prop('checked', true);
-	$('input:checkbox[name="parents_senior_citizen"][value=""]').prop('checked', true);
-	$('input:checkbox[name="parents_sugar_worker"][value=""]').prop('checked', true);
-	$('input:checkbox[name="parents_ip"][value=""]').prop('checked', true);
-	$('input:checkbox[name="parents_rebel_returnees"][value=""]').prop('checked', true);
-	$('input:checkbox[name="parents_victims_armed_conflict"][value=""]').prop('checked', true);
-
-	$('input:radio[name="parents_displaced"][value=""]').prop('checked', true);		
-	$('input:radio[name="tvet_student"][value=""]').prop('checked', true);		
-	// $('input:radio[name="spes_baby"][value=""]').prop('checked', true);	
-
-
-	$('#peso_id').val();
-	$('#gsis_ben_relationship').val();
-	$('#province_id').val('0');
-	$('#city_municipality_id').val('');
-	$('#barangay_id').val();
-	$('#province_id2').val('0');
-	$('#city_municipality_id2').val('00000');
-	$('#barangay_id2').val();
-	$('#spes_times').val();
-
-
-
-	disabled_industry();
-	
-	function get_industry_type(id) {
-
-		var industry_type = $('#dti_industry_code_id');
-		industry_type.empty();
-		industry_type.append($('<option></option>').attr("value", 0).text('Loading...'));
-
-		$.getJSON('https://spes.dole11portal.org/index.php/ajaxsupport/get_industry_json/' + id, function(data) {
-			industry_type.empty();				
-            industry_type.append($('<option></option>').attr("value", 0).text('Select Industry Type'));
-            $.each(data, function(){
-                industry_type.append($('<option></option>').attr("value", this.id).text(this.description));
-            });
-		});
-	}
-	
-	function select_mun(id) {
-
-		var mun_city = $('#city_municipality_id');
-		mun_city.empty();
-		mun_city.append($('<option></option>').attr("value", 0).text('Loading...'));
-
-		$.getJSON('https://spes.dole11portal.org/index.php/ajaxsupport/get_mun_json/' + id, function(data) {
-			mun_city.empty();				
-            mun_city.append($('<option></option>').attr("value", 0).text('Select City/Municipality'));
-            $.each(data, function(){
-                mun_city.append($('<option></option>').attr("value", this.citymunCode).text(this.citymunDesc));
-            });
-		});
-	}
-	
-	function select_brgy(id) {
-
-		var barangay_id = $('#barangay_id');
-		barangay_id.empty();
-		barangay_id.append($('<option></option>').attr("value", 0).text('Loading...'));
-
-		$.getJSON('https://spes.dole11portal.org/index.php/ajaxsupport/get_brgy_json/' + id, function(data) {
-			barangay_id.empty();				
-            barangay_id.append($('<option></option>').attr("value", 0).text('Select Barangay'));
-            $.each(data, function(){
-                barangay_id.append($('<option></option>').attr("value", this.id).text(this.brgyDesc));
-            });
-		});
-	}
-	
-	function select_mun1(id) {
-
-		var mun_city = $('#city_municipality_id2');
-		mun_city.empty();
-		mun_city.append($('<option></option>').attr("value", 0).text('Loading...'));
-
-		$.getJSON('https://spes.dole11portal.org/index.php/ajaxsupport/get_mun_json/' + id, function(data) {
-			mun_city.empty();				
-            mun_city.append($('<option></option>').attr("value", 0).text('Select City/Municipality'));
-            $.each(data, function(){
-                mun_city.append($('<option></option>').attr("value", this.citymunCode).text(this.citymunDesc));
-            });
-		});
-	}
-	
-	function select_brgy1(id) {
-
-		var barangay_id = $('#barangay_id2');
-		barangay_id.empty();
-		barangay_id.append($('<option></option>').attr("value", 0).text('Loading...'));
-
-		$.getJSON('https://spes.dole11portal.org/index.php/ajaxsupport/get_brgy_json/' + id, function(data) {
-			barangay_id.empty();				
-            barangay_id.append($('<option></option>').attr("value", 0).text('Select Barangay'));
-            $.each(data, function(){
-                barangay_id.append($('<option></option>').attr("value", this.id).text(this.brgyDesc));
-            });
-		});
-	}
-	
-	function disabled_industry(id) {
-		
-		if(id == 4 || id == 5) {
-			$('#industry_type').removeAttr('disabled', 'disabled');
-			$('#dti_industry_code_id').removeAttr('disabled', 'disabled');
-		} else {
-			$('#industry_type').attr('disabled', 'disabled');
-			$('#dti_industry_code_id').attr('disabled', 'disabled');
-			$('#industry_type').val('');
-			$('#dti_industry_code_id').val('');
-		}
-	
-	}
-
-	//INITIALIZE VARIABLES FOR SPES YEAR DROPDOWN
-	let dateDropdown = document.getElementById('spes_baby_year'); 
-	let spesBaby = document.getElementById('spes_baby'); 
-	var currentYear = new Date().getFullYear();    
-	let earliestYear = 1970;   
-
-	//POPULATE SPES YEAR DROPDOWN WITH VALUES
-	while (currentYear >= earliestYear) {    
-		
-		let dateOption = document.createElement('option');
-
-		if (currentYear == new Date().getFullYear()){
-			dateOption.text = currentYear + " (First Time)";     
-		} else {
-			dateOption.text = currentYear;
-		}
-
-		dateOption.value = currentYear; 
-		dateOption.id = 'spes_baby_' + currentYear;
-		dateOption.setAttribute('name', 'spes_baby_year');
-
-				
-		dateDropdown.add(dateOption);  
-		currentYear -= 1;    
-
-	}
-
-	//SET SPES BABY VALUE BASED ON SELECTED SPES YEAR OPTION
-	$('#spes_baby_year').change(function() {
-
-		var spesBabyYear = $(this).val();
-		var currYear = new Date().getFullYear();
-		if (spesBabyYear == new Date().getFullYear()){
-			$('#spes_baby').val("2");
-		} else {
-			$('#spes_baby').val("1");
-		}
-	});
-
-	//SET SPES BABY VALUE BASED ON SELECTED SPES YEAR OPTION
-	$('#spes_times').change(function() {
-
-		var spesTimes = $(this).val();
-		if (spesTimes == '0'){
-			$('#spes_baby').val("2");
-		} else {
-			$('#spes_baby').val("1");
-		}
-	});
-
-	//ENABLE AND SHOW TECHVOC FIELD IF "YES" RADIO BUTTON FOR TECHVOC IS CHECKED ON PAGE LOAD
-	if($('#tvet_student_yes').is(':checked') && $("#hs_year_level").val() == 8){
-		$("#tvet_student_div").attr("hidden", false);
-		$("#tvet_school_name").attr("disabled", false);
-		$("#tvet_course").attr("disabled", false);
-		$("#tvet_school_level").attr("disabled", false);
-		$("#tvet_date_attendance").attr("disabled", false);
-	}
-
-	//FUNCTION FOR ENABLING OR DISABLING HIGH SCHOOL FIELD
-	function hs_enable_disable(){
-		if($("#year_grade_level").val() != 7){
-			$("#hs_name").attr("disabled", true);
-			$("#hs_degree").attr("disabled", true);
-			$("#hs_year_level").attr("disabled", true);
-			$("#hs_date_attendance").attr("disabled", true);
-		} else {
-			$("#hs_name").attr("disabled", false);
-			$("#hs_degree").attr("disabled", false);
-			$("#hs_year_level").attr("disabled", false);
-			$("#hs_date_attendance").attr("disabled", false);
-		}
-	}
-
-	//FUNCTION FOR ENABLING/SHOWING OR DISABLING/HIDING COLLEGE AND TECHVOC FIELDS
-	function suc_tvet_enable_disable(){
-		if($("#hs_year_level").val() != 8){
-			$("#suc_name").attr("disabled", true);
-			$("#suc_course").attr("disabled", true);
-			$("#suc_year_level").attr("disabled", true);
-			$("#suc_date_attendance").attr("disabled", true);
-			$("#tvet_student_yes").attr("disabled", true);
-			$("#tvet_student_no").attr("disabled", true);
-			$("#tvet_school_name").attr("disabled", true);
-			$("#tvet_course").attr("disabled", true);
-			$("#tvet_school_level").attr("disabled", true);
-			$("#tvet_date_attendance").attr("disabled", true);
-		} else {
-			$("#suc_name").attr("disabled", false);
-			$("#suc_course").attr("disabled", false);
-			$("#suc_year_level").attr("disabled", false)
-			$("#suc_date_attendance").attr("disabled", false);
-			$("#tvet_student_yes").attr("disabled", false);
-			$("#tvet_student_no").attr("disabled", false);
-			$("#tvet_school_name").attr("disabled", false);
-			$("#tvet_course").attr("disabled", false);
-			$("#tvet_school_level").attr("disabled", false);
-			$("#tvet_date_attendance").attr("disabled", false);
-
-			if($('#tvet_student_yes').is(':checked')){
-				$("#tvet_student_div").attr("hidden", false);
-				$("#tvet_school_name").attr("disabled", false);
-				$("#tvet_course").attr("disabled", false);
-				$("#tvet_school_level").attr("disabled", false);
-				$("#tvet_date_attendance").attr("disabled", false);
-			}
-		}
-	};
-
-	//ENABLE OR DISABLE HIGHSCOOL FIELD ON PAGE LOAD (BASE ON USER'S DATA)
-	hs_enable_disable();
-	//ENABLE/SHOW OR DISABE/HIDE COLLEGE AND TECHVOC FIELDS ON PAGE LOAD (BASE ON USER'S DATA)
-	suc_tvet_enable_disable();
-
-	//ENABLE OR DISABLE HIGHSCOOL FIELD (BASE ON USER CLICK)
-	$("#year_grade_level").click(function() {
-		hs_enable_disable();
-	});
-
-	//ENABLE/SHOW OR DISABE/HIDE COLLEGE AND TECHVOC FIELDS (BASE ON USER CLICK)
-	$("#hs_year_level").click(function() {
-		suc_tvet_enable_disable(); 
-	});
-
-
-
-	//ENABLE AND SHOW TECHVOC FIELD IF "YES" RADIO BUTTON FOR TECHVOC IS CLICKED
-	$("#tvet_student_yes").click(function() {
-		$("#tvet_student_div").attr("hidden", false);
-		$("#tvet_school_name").attr("disabled", false);
-		$("#tvet_course").attr("disabled", false);
-		$("#tvet_school_level").attr("disabled", false);
-		$("#tvet_date_attendance").attr("disabled", false);
-	});
-
-	//DISABLE AND HIDE TECHVOC FIELD IF "NO" RADIO BUTTON FOR TECHVOC IS CLICKED
-	$("#tvet_student_no").click(function() {
-		$("#tvet_student_div").attr("hidden", true);
-		$("#tvet_school_name").attr("disabled", true);
-		$("#tvet_course").attr("disabled", true);
-		$("#tvet_school_level").attr("disabled", true);
-		$("#tvet_date_attendance").attr("disabled", true);
-	});
-
 	
 	</script>
         </div>\
