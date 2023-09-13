@@ -27,10 +27,7 @@
     <!-- jQuery UI -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<<<<<<< HEAD
-=======
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
->>>>>>> f3da40a83056b0f7227d198a4cb3a8a10d082ce8
   </head>
 
   <body class="nav-md" >
@@ -375,9 +372,6 @@
         }
     </script> -->
 
-<<<<<<< HEAD
-	
-=======
 	<script>
 $(document).ready(function() {
   // Add a click event handler to the parent menu items with a dropdown
@@ -389,6 +383,5 @@ $(document).ready(function() {
   });
 });
 </script>
->>>>>>> f3da40a83056b0f7227d198a4cb3a8a10d082ce8
   </body>
 </html>

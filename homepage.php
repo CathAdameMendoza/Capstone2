@@ -25,10 +25,7 @@
     <link href="custom.css" rel="stylesheet">
 	  <!-- <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="29efea84-679c-4042-bdb8-a3ccc09e5088";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script> -->
     <!-- jQuery UI -->
-<<<<<<< HEAD
-=======
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
->>>>>>> f3da40a83056b0f7227d198a4cb3a8a10d082ce8
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
@@ -61,17 +58,10 @@
 	<ul class="nav side-menu">
 	  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
 		<ul class="nav child_menu">
-<<<<<<< HEAD
-    <li><a href="http://localhost/Capstone/homepage.php">Dashboard</a></li>		
-		  <li><a href="http://localhost/Capstone/spes_profile.php">My Profile <span class="badge bg-red pull-right">0%</span></a></li>
-		  <li><a href="http://localhost/Capstone/pre_emp_doc.php">Required Docs. <span class="badge bg-red pull-right">0%</span></a></li>
-		  <li><a href="http://localhost/Capstone/submit_application.php">Submit Application </a></li>
-=======
     <li><a href="homepage.php">Dashboard</a></li>		
 		  <li><a href="spes_profile.php">My Profile <span class="badge bg-red pull-right">0%</span></a></li>
 		  <li><a href="pre_emp_doc.php">Required Docs. <span class="badge bg-red pull-right">0%</span></a></li>
 		  <li><a href="submit_application.php">Submit Application </a></li>
->>>>>>> f3da40a83056b0f7227d198a4cb3a8a10d082ce8
 		</ul>
 	  </li>
 	  	  <li><a href=" "> <i class="fa fa-cog"></i>Settings</a></li>
@@ -173,8 +163,6 @@
             document.getElementById("mainContent").style.display = "block";
         }
     </script> 
-<<<<<<< HEAD
-=======
     <script>
 $(document).ready(function() {
   // Add a click event handler to the parent menu items with a dropdown
@@ -186,7 +174,6 @@ $(document).ready(function() {
   });
 });
 </script>
->>>>>>> f3da40a83056b0f7227d198a4cb3a8a10d082ce8
 
 	
   </body>
