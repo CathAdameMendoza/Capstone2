@@ -15,6 +15,17 @@
 .container {
     width: 750px;
 }
+<<<<<<< HEAD
+=======
+.nav ul {
+    position: absolute;
+    background:#2A3F54;
+    list-style: none;
+    
+
+
+}
+>>>>>>> f3da40a83056b0f7227d198a4cb3a8a10d082ce8
 
 .container {
     padding-right: 15px;

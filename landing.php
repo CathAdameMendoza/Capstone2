@@ -57,7 +57,12 @@ Forgot password?
 </div>
 
 <!-- Submit button -->
+<<<<<<< HEAD
 <button type="submit" class="btn btn-primary btn-lg btn-block">Log In</button>
+=======
+<a class="btn btn-primary btn-lg btn-block" style="background-color: #1054d4" href="homepage.php" role="button">
+Login </a>
+>>>>>>> f3da40a83056b0f7227d198a4cb3a8a10d082ce8
 <div class="pt-2"> </div>
 									
 									

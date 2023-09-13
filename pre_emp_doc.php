@@ -27,6 +27,10 @@
     <!-- jQuery UI -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<<<<<<< HEAD
+=======
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+>>>>>>> f3da40a83056b0f7227d198a4cb3a8a10d082ce8
   </head>
 
   <body class="nav-md" >
@@ -371,6 +375,20 @@
         }
     </script> -->
 
+<<<<<<< HEAD
 	
+=======
+	<script>
+$(document).ready(function() {
+  // Add a click event handler to the parent menu items with a dropdown
+  $("#sidebar-menu .nav.side-menu > li > a").click(function(e) {
+    e.preventDefault(); // Prevent the default link behavior
+    $(this).parent().toggleClass("active"); // Toggle the "active" class on the parent li
+    $(this).find(".fa-chevron-down").toggleClass("fa-chevron-up"); // Toggle the chevron icon
+    $(this).next("ul.nav.child_menu").slideToggle(); // Toggle the child menu
+  });
+});
+</script>
+>>>>>>> f3da40a83056b0f7227d198a4cb3a8a10d082ce8
   </body>
 </html>
